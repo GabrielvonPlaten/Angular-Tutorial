@@ -12,6 +12,17 @@ export class TodoItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(Input);
+    console.log(this.todo);
+  }
+
+  // Set dynamic classes
+  setClasses() {
+    let classes: any = {
+      todo: true,
+      colorme: false,
+      'is-complete': this.todo.completed
+    };
+
+    return classes;
   }
 }
